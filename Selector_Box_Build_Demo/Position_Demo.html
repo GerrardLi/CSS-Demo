@@ -41,7 +41,6 @@
 
 		.inner-relative-div {
 			position: relative;
-			top: 150px;
 			background-color: red;
 			text-align: center;
 			vertical-align: middle;
@@ -67,15 +66,13 @@
 
 <body>
 	<div class="fixed-div">Position Demo</div>
-	<div>
-		<div class="outer-div" style="left:500px;top: 120px;position: relative;">
-			<div class="inner-absolute-div" style="opacity: 0.3;">absolute 1 in outer 1</div>
-			<div class="inner-relative-div" style="left:20px;top: 120px;opacity: 0.3;">relative 1 in outer 1</div>
-		</div>
-		<div class="outer-div" style="left:20px;top: 120px;position: absolute;">
-			<div class="inner-relative-div" style="left:250px;top: 20px;opacity: 0.3;">relative 2 in outer 2</div>
-			<div class="inner-absolute-div">absolute 2 in outer 2</div>
-		</div>
+	<div class="outer-div" style="left:500px;top: 120px;position: relative;">
+		<div class="inner-absolute-div" style="opacity: 0.3;">absolute 1 in outer 1</div>
+		<div class="inner-relative-div" style="left:20px;top: 120px;opacity: 0.3;">relative 1 in outer 1</div>
+	</div>
+	<div class="outer-div" style="left:20px;top: 120px;position: absolute;">
+		<div class="inner-relative-div" style="left:250px;top: 120px;opacity: 0.3;">relative 2 in outer 2</div>
+		<div class="inner-absolute-div">absolute 2 in outer 2</div>
 	</div>
 </body>
 
