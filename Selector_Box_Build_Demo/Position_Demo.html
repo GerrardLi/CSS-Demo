@@ -18,172 +18,62 @@
 			color: silver;
 		}
 
-		.round-btn {
-			box-sizing: border-box;
-			border: 2px solid gray;
-			border-radius: 50px;
-			width: 50px;
-			/* height: 100px; */
-			margin: 5px;
-			display: inline-block;
-			line-height: 50px;
-			text-align: center;
+		.fixed-div {
+			position: fixed;
+			top: 0;
+			left: 0;
+			margin: 20px;
+			font-size: 48;
 		}
 
-		.round-btn:hover {
+		.fixed-div:hover {
 			background-color: #eeeeee;
 			border-color: Blue;
 			color: #0000C6;
 		}
 
-		.outer {
-			float: left;
-			width: 100%;
-			margin: 3px;
-		}
-
-		.outer:nth-child(odd) {
-			background-color: #ADADAD;
-		}
-
-		.outer:nth-child(even) {
-			background-color: #F0F0F0;
-		}
-
-		a {
-			color: red;
-		}
-
-		a:visited {
-			color: yellow;
-		}
-
-		a:hover {
-			color: blue;
-		}
-
-		a:active {
-			color: green;
-		}
-
-		a.hover:focus,
-		a.hover:active,
-		a.hover:visited {
-			color: gray;
-		}
-
-		a.hover:hover {
-			color: pink;
-		}
-
-		.boxToggle {
-			box-sizing: border-box;
-			border: 20px solid gray;
-			height: 300px;
+		.outer-div {
 			margin: 20px;
-			padding: 20px;
-			/* display: inline-block; */
-			line-height: 50px;
+			background-color: #e3e3e3;
+			width: 400px;
+			height: 400px;
 		}
 
-		.boxToggle:hover {
-			box-sizing: content-box;
-			border: 20px solid red;
-			height: 300px;
-			margin: 20px;
-			padding: 20px;
-			line-height: 50px;
+		.inner-relative-div {
+			position: relative;
+			top: 150px;
+			background-color: red;
+			text-align: center;
+			vertical-align: middle;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
 		}
 
-		.box-wrapper {
-			/* display: block; 
-			position: absolute" */
-		}
-
-		.border-box {
-			/* position: absolute; */
-			display: block;
-			box-sizing: border-box;
-
-			height: 300px;
-			width: 300px;
-
-			border: 20px solid gray;
-			margin: 20px;
-			padding: 20px;
-			line-height: 50px;
-			opacity: .3;
-		}
-
-		.content-box {
-			/* position: absolute; */
-			display: block;
-			box-sizing: content-box;
-
-			height: 300px;
-			width: 300px;
-
-			border: 20px solid red;
-			margin: 20px;
-			padding: 20px;
-			line-height: 50px;
-		}
-
-		.priority-compare {
-			color: red;
-		}
-
-		#aaaa div {
-			color: green;
+		.inner-absolute-div {
+			position: absolute;
+			top: 10px;
+			background-color: green;
+			text-align: center;
+			vertical-align: middle;
+			top: 100px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
 		}
 	</style>
 </head>
 
 <body>
-
-	<h1>CSS Demo</h1>
-	<div class="super">
-		<h1>Round Button & Even Background Color</h1>
-		<div class="outer">
-			<div class="round-btn">Click</div>
-		</div>
-		<div class="outer">
-			<div class="round-btn">Click</div>
-		</div>
-		<div class="outer">
-			<div class="round-btn">Click</div>
-		</div>
-
-
-		<h1>Link Color for Focus / Hover / Active / Visited</h1>
-		<div>
-			<a id="z" class="focus" href="#z">Focus Link</a>
-		</div>
-		<div>
-			<a id="a" class="focus" href="#a">Focus Link</a>
-		</div>
-		<div>
-			<a id="b" class="hover" href="#b">Hover Link</a>
-		</div>
-		<div>
-			<a id="c" class="active" href="#c">Active Link</a>
-		</div>
-		<div>
-			<a id="d" class="visited" href="http://wwww.baidu.com" target="_blank">Visited Link</a>
-		</div>
-
-		<h1>Content-Box VS Border-Box</h1>
-		<div class="box-wrapper">
-			<div class="content-box">Content-Box (Heigt: 300px; Width: 300px; Padding:20px Margin:20px Border:20px )</div>
-			<div class="border-box">Border-Box (Heigt: 300px; Width: 300px; Padding:20px Margin:20px Border:20px )</div>
-		</div>
-		<h1>Priority</h1>
-		<div id="aaaa">
-			<div class="priority-compare">selector is #id div</div>
-		</div>
-		<div>
-			<div>selector is .priority-compare</div>
-		</div>
+	<div class="fixed-div">Position Demo</div>
+	<div class="outer-div" style="left:500px;top: 120px;position: relative;">
+		<div class="inner-absolute-div" style="opacity: 0.3;">absolute 1 in outer 1</div>
+		<div class="inner-relative-div" style="left:20px;top: 120px;opacity: 0.3;">relative 1 in outer 1</div>
+	</div>
+	<div class="outer-div" style="left:20px;top: 120px;position: absolute;">
+		<div class="inner-relative-div" style="left:250px;top: 20px;opacity: 0.3;">relative 2 in outer 2</div>
+		<div class="inner-absolute-div">absolute 2 in outer 2</div>
 	</div>
 </body>
 
