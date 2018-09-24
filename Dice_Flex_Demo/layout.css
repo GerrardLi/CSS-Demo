@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 
-.HolyGrail {
+.holy-grail {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -21,64 +21,59 @@ body {
 
 header,
 footer {
-    background-color: gray;
-    text-align: center;
-    height: 30px;
-    line-height: 30px;
+    flex: 1;
 }
 
-header {
-    position:absolute;
-    left:0;
-    right:0;
+/* header {
+    position: absolute;
+    left: 0;
+    right: 0;
     top: 0;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 footer {
-    position:absolute;
-    left:0;
-    right:0;
+    position: absolute;
+    left: 0;
+    right: 0;
     bottom: 0;
-    opacity:0.8;
-}
+    opacity: 0.8;
+} */
 
-.HolyGrail-body {
+.holy-grail-body {
     display: flex;
     flex: 1;
 }
 
-.HolyGrail-content {
+.holy-grail-content {
     flex: 1;
-    height: 100%;
 }
 
-.HolyGrail-nav,
-.HolyGrail-ads {
+.holy-grail-nav,
+.holy-grail-ads {
     flex: 0 0 12em;
     background-color: orange;
     text-align: center;
 }
 
-.HolyGrail-nav {
+.holy-grail-nav {
     order: -1;
     background-color: blue;
     text-align: center;
 }
 
 .grail-content {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width:100%;
-    height:100%;
-  }
+    width: 100%;
+}
 
-.grail-text{
-    display:flex;
-    align-items:center;
+.grail-text {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin:0;
-    padding:0;
-    width:25%;
-  }
+    margin: 0;
+    padding: 0;
+    width: 25%;
+}

@@ -1,5 +1,5 @@
-﻿document.addEventListener('DOMContentLoaded', function () {
-	//注销时间，避免重复触发
+﻿document.addEventListener('DOMContentLoaded', function()
+{
 	document.removeEventListener('DOMContentLoaded', arguments.callee, false);
 	var btnUpdateAttr = document.getElementById("btnUpdateAttr");
 	var btnUpdateClass = document.getElementById("btnUpdateClass");
@@ -9,7 +9,8 @@
 
 	var attrPart = document.getElementById("attrPart");
 	attrPart.setAttribute("name", "AAA");
-	btnUpdateAttr.addEventListener("click", function () {
+	btnUpdateAttr.addEventListener("click", function()
+	{
 		var attrPart = document.getElementById("attrPart");
 		var oldAttr = document.getElementById("oldAttr");
 		var newAttr = document.getElementById("newAttr");
@@ -18,14 +19,18 @@
 	});
 
 
-	btnUpdateClass.addEventListener("click", function () {
+	btnUpdateClass.addEventListener("click", function()
+	{
 		var classPart = document.getElementById("classPart");
-		if (classPart.getAttribute("class") === "content") {
+		if (classPart.getAttribute("class") === "content")
+		{
 			classPart.setAttribute("class", "content-start content-red");
 		}
-		else {
+		else
+		{
 			classPart.className = "content";
-			setTimeout(function () {
+			setTimeout(function()
+			{
 				classPart.className += " content-yellow";
 			}, 2000);
 		}
@@ -41,24 +46,30 @@
 		peopleCount: 4
 	};
 
-	btnUpdateData.addEventListener("click", function () {
+	btnUpdateData.addEventListener("click", function()
+	{
 		var dataPart = document.getElementById("dataPart");
-		if (dataPart.getAttribute("class") === "content") {
+		if (dataPart.getAttribute("class") === "content")
+		{
 			dataPart.setAttribute("class", "content-end");
 			dataPart.dataset.plan = JSON.stringify(normalPlan);
 		}
-		else {
+		else
+		{
 			dataPart.className = "content";
 			dataPart.dataset.plan = JSON.stringify(extraPlan);
 		}
 	});
 
-	btnUpdateAJAX.addEventListener("click", function () {
+	btnUpdateAJAX.addEventListener("click", function()
+	{
 		var options = {
-			success: function () {
+			success: function()
+			{
 				alert('success!');
 			},
-			error: function () {
+			error: function()
+			{
 				alert('error!');
 			},
 			data: {
@@ -69,7 +80,8 @@
 		getData('/getTripList', options);
 	});
 
-	btnAnimation.addEventListener("click", function () {
+	btnAnimation.addEventListener("click", function()
+	{
 		clearInterval(animateInterval);
 		intervalIndex = 0;
 		animateInterval = setInterval('animationFunc()', 300);
@@ -79,28 +91,37 @@
 var animateInterval;
 var intervalCount = 9;
 var intervalIndex = 0;
-var animationFunc = function () {
-	if (intervalIndex >= intervalCount) {
+var animationFunc = function()
+{
+	if (intervalIndex >= intervalCount)
+	{
 		var dots = document.getElementsByClassName("dot");
-		for (var i = 0; i < dots.length; i++) {
+		for (var i = 0; i < dots.length; i++)
+		{
 			dots[i].style.cssText += 'background-color:#e3e3e3';
 		}
 		clearInterval(intervalId);
 	}
-	else {
+	else
+	{
 		document.getElementsByClassName("dot")[intervalIndex].style.cssText += 'background-color:black';
 	}
 	intervalIndex++;
 }
 
-function getData(url, options) {
+function getData(url, options)
+{
 	var xhRequest = new XMLHttpRequest();
-	xhRequest.onreadystatechange = function () {
-		if (xhRequest.readyState === 4) {
-			if (xhRequest.status === 200) {
+	xhRequest.onreadystatechange = function()
+	{
+		if (xhRequest.readyState === 4)
+		{
+			if (xhRequest.status === 200)
+			{
 				options.success(xhRequest.responseText, xhRequest);
 			}
-			else if (xhRequest.status === 404) {
+			else if (xhRequest.status === 404)
+			{
 				options.error(xhRequest.responseText, xhRequest);
 			}
 		}
