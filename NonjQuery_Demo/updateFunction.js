@@ -76,7 +76,7 @@
 				studentId: 666,
 				DBID: 7
 			}
-		}
+		};
 		getData('/getTripList', options);
 	});
 
@@ -84,7 +84,7 @@
 	{
 		clearInterval(animateInterval);
 		intervalIndex = 0;
-		animateInterval = setInterval('animationFunc()', 300);
+		animateInterval = setInterval(animationFunc, 300);
 	});
 }, false);
 
@@ -107,16 +107,17 @@ var animationFunc = function()
 		document.getElementsByClassName("dot")[intervalIndex].style.cssText += 'background-color:black';
 	}
 	intervalIndex++;
-}
+};
 
 function getData(url, options)
 {
+	a = 2;
 	var xhRequest = new XMLHttpRequest();
 	xhRequest.onreadystatechange = function()
 	{
 		if (xhRequest.readyState === 4)
 		{
-			if (xhRequest.status === 200)
+			if (xhRequest.status == 200)
 			{
 				options.success(xhRequest.responseText, xhRequest);
 			}
