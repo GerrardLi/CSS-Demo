@@ -1,0 +1,79 @@
+<!DOCTYPE html language="en">
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Position Demo</title>
+	<style type="text/css">
+		html {
+			color: black;
+		}
+
+		h1 {
+			color: blue;
+		}
+
+		h2 {
+			color: silver;
+		}
+
+		.fixed-div {
+			position: fixed;
+			top: 0;
+			left: 0;
+			margin: 20px;
+			font-size: 48;
+		}
+
+		.fixed-div:hover {
+			background-color: #eeeeee;
+			border-color: Blue;
+			color: #0000C6;
+		}
+
+		.outer-div {
+			margin: 20px;
+			background-color: #e3e3e3;
+			width: 400px;
+			height: 400px;
+		}
+
+		.inner-relative-div {
+			position: relative;
+			background-color: red;
+			text-align: center;
+			vertical-align: middle;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+		}
+
+		.inner-absolute-div {
+			position: absolute;
+			top: 10px;
+			background-color: green;
+			text-align: center;
+			vertical-align: middle;
+			top: 100px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="fixed-div">Position Demo</div>
+	<div class="outer-div" style="left:500px;top: 120px;position: relative;">
+		<div class="inner-absolute-div" style="opacity: 0.3;">absolute 1 in outer 1</div>
+		<div class="inner-relative-div" style="left:20px;top: 120px;opacity: 0.3;">relative 1 in outer 1</div>
+	</div>
+	<div class="outer-div" style="left:20px;top: 120px;position: absolute;">
+		<div class="inner-relative-div" style="left:250px;top: 120px;opacity: 0.3;">relative 2 in outer 2</div>
+		<div class="inner-absolute-div">absolute 2 in outer 2</div>
+	</div>
+</body>
+
+</html>
