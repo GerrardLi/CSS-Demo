@@ -1,0 +1,55 @@
+html {
+			color: black;
+		}
+
+		h1 {
+			color: blue;
+		}
+
+		h2 {
+			color: silver;
+		}
+
+		.fixed-div {
+			position: fixed;
+			top: 0;
+			left: 0;
+			margin: 20px;
+			font-size: 48;
+		}
+
+		.fixed-div:hover {
+			background-color: #eeeeee;
+			border-color: Blue;
+			color: #0000C6;
+		}
+
+		.outer-div {
+			margin: 20px;
+			background-color: #e3e3e3;
+			width: 400px;
+			height: 400px;
+		}
+
+		.inner-relative-div {
+			position: relative;
+			background-color: red;
+			text-align: center;
+			vertical-align: middle;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+		}
+
+		.inner-absolute-div {
+			position: absolute;
+			top: 10px;
+			background-color: green;
+			text-align: center;
+			vertical-align: middle;
+			top: 100px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+		}

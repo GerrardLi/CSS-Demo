@@ -1,0 +1,156 @@
+#X.box {
+    background: red;
+}
+
+#X>.box {
+    background: green;
+}
+
+#X .box {
+    background: blue;
+}
+
+.box {
+    background: yellow;
+}
+
+.box {
+    background: yellow !important;
+}
+
+html {
+    color: black;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: silver;
+}
+
+.round-btn {
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 50px;
+    width: 50px;
+    /* height: 100px; */
+    margin: 5px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+}
+
+.round-btn:hover {
+    background-color: #eeeeee;
+    border-color: Blue;
+    color: #0000C6;
+}
+
+.outer {
+    float: left;
+    width: 100%;
+    margin: 3px;
+}
+
+.outer:nth-child(odd) {
+    background-color: #ADADAD;
+}
+
+.outer:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+a {
+    color: red;
+}
+
+a:visited {
+    color: yellow;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: green;
+}
+
+a.focus:hover,
+a.focus:active,
+a.focus:visited {
+    color: #0000C6;
+}
+
+a.focus:focus {
+    color: red;
+}
+
+a.hover:focus,
+a.hover:active,
+a.hover:visited {
+    color: gray;
+}
+
+a.hover:hover {
+    color: pink;
+}
+
+a.active:hover,
+a.active:focus,
+a.active:visited {
+    color: green;
+}
+
+a.active:active {
+    color: yellow;
+}
+
+a.visited:hover,
+a.visited:active,
+a.visited:focus {
+    color: purple;
+}
+
+a.visited:visited {
+    color: #102b6a;
+}
+
+.border-box {
+    /* position: absolute; */
+    display: block;
+    box-sizing: border-box;
+
+    height: 300px;
+    width: 300px;
+
+    border: 20px solid gray;
+    margin: 20px;
+    padding: 20px;
+    line-height: 50px;
+    opacity: .3;
+}
+
+.content-box {
+    /* position: absolute; */
+    display: block;
+    box-sizing: content-box;
+
+    height: 300px;
+    width: 300px;
+
+    border: 20px solid red;
+    margin: 20px;
+    padding: 20px;
+    line-height: 50px;
+}
+
+.priority-compare {
+    color: red;
+}
+
+#aaaa div {
+    color: green;
+}
