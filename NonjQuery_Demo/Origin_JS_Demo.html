@@ -1,161 +1,58 @@
 <!DOCTYPE html language="en">
 <html>
-
 <head>
-
 	<meta charset="utf-8">
 	<title>Non jQuery Demo</title>
-	<style type="text/css">
-	</style>
 	<link rel="stylesheet" href="./nonjquery.css" type="text/css" />
-
+	<script type="text/javascript" src="./updateFunction.js"></script>
 </head>
-
 <body>
-	<div class="title">Update attr</div>
-	<div class="content" id="attrPart">
-		<span>Old attr:</span><label id="oldAttr">AAA</label>
-		<span>New attr:</span>
-		<input type="text" id="newAttr" value="" />
-		<input type="button" id="btnAttr" value="Update" />
-		<!-- <div>Old attr:</div><div id="oldAttr">AAA</div>
-		<div>New attr</div><div id="newAttr"></div>
-		<div  id="btnAttr" text="">Update</div> -->
-	</div>
-	<div class="title">Update class</div>
-	<div class="content" id="classPart">
-		<input type="button" id="btnClass" value="Update" />
-	</div>
-	<div class="title">Update data</div>
-	<div class="content" id="dataPart">
-		<input type="button" id="btnData" value="Update" />
-	</div>
-	<div class="title">AJAX</div>
-	<div class="content">
-		<input type="button" id="btnAJAX" value="Get" />
-	</div>
-	<div class="title">Animation</div>
-	<div class="content">
-		<input type="button" id="btnAnimation" value="Animate" />
-	</div>
-	<div class="dice">
-		<div class="dice-row">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
+	<div class="fixed-div">Non jQuery Demo</div>
+	<div class="fixed-div-occupy"></div>
+	<div class="container">
+		<div class="title">Update attr</div>
+		<div class="content" id="attrPart">
+			<span>Old attr:</span><label id="oldAttr">AAA</label>
+			<span>New attr:</span>
+			<input type="text" id="newAttr" value="" />
+			<input type="button" id="btnUpdateAttr" value="Update" />
 		</div>
-		<div class="dice-row">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
+		<div class="title">Update class</div>
+		<div class="content" id="classPart">
+			<input type="button" id="btnUpdateClass" value="Update" />
 		</div>
-		<div class="dice-row">
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
+		<div class="title">Update data</div>
+		<div class="content" id="dataPart">
+			<input type="button" id="btnUpdateData" value="Update" />
+		</div>
+		<div class="title">AJAX</div>
+		<div class="content">
+			<input type="button" id="btnUpdateAJAX" value="Get" />
+		</div>
+		<div class="title">Animation</div>
+		<div class="content">
+			<input type="button" id="btnAnimation" value="Animate" />
+		</div>
+		<div class="dice">
+			<div class="dice-row">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+			<div class="dice-row">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+			<div class="dice-row">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
 		</div>
 	</div>
+
 </body>
-<script type="text/javascript">
-	var btnAttr = document.getElementById("btnAttr");
-	var btnClass = document.getElementById("btnClass");
-	var btnData = document.getElementById("btnData");
-	var btnAJAX = document.getElementById("btnAJAX");
-	var btnAnimation = document.getElementById("btnAnimation");
-
-	var attrPart = document.getElementById("attrPart");
-	attrPart.setAttribute("name", "AAA");
-	btnAttr.addEventListener("click", function () {
-		var attrPart = document.getElementById("attrPart");
-		var oldAttr = document.getElementById("oldAttr");
-		var newAttr = document.getElementById("newAttr");
-		oldAttr.innerText = attrPart.getAttribute("name");
-		attrPart.setAttribute("name", newAttr.value);
-	});
-
-
-	btnClass.addEventListener("click", function () {
-		var classPart = document.getElementById("classPart");
-		if (classPart.getAttribute("class") == "content") {
-			classPart.setAttribute("class", "content-start");
-		}
-		else {
-			classPart.className = "content";
-		}
-	});
-
-	var normalPlan = {
-		time: "8h",
-		peopleCount: 3
-	};
-
-	var extraPlan = {
-		time: "12h",
-		peopleCount: 4
-	};
-
-	btnData.addEventListener("click", function () {
-		var dataPart = document.getElementById("dataPart");
-		if (dataPart.getAttribute("class") == "content") {
-			dataPart.setAttribute("class", "content-end");
-			dataPart.dataset.plan = JSON.stringify(normalPlan);
-		}
-		else {
-			dataPart.className = "content";
-			dataPart.dataset.plan = JSON.stringify(extraPlan);
-		}
-	});
-
-	btnAJAX.addEventListener("click", function () {
-		var options = {
-			success:function(){
-				alert('success!');
-			},
-			error:function(){
-				alert('error!');
-			},
-			data:{
-				studentId:666,
-				DBID:7
-			}
-		}
-		getData('/getTripList', options);
-	});
-
-	btnAnimation.addEventListener("click", function () {
-		clearInterval(animateInterval);
-		var dotIndex = 0;
-		var animateInterval = setInterval(function () {
-			if (dotIndex >= 9) {
-				clearInterval(animateInterval);
-				var dots = document.getElementsByClassName("dot");
-				for (var i = 0; i < dots.length; i++) {
-					dots[i].style.cssText += 'background-color:#e3e3e3';
-				}
-			}
-			else {
-				document.getElementsByClassName("dot")[dotIndex].style.cssText += 'background-color:black';
-			}
-			dotIndex++;
-		}, 300);
-	});
-
-	function getData(url, options) {
-		var xhRequest = new XMLHttpRequest();
-		xhRequest.onreadystatechange = function(){
-			if(xhRequest.readyState == 4){
-				if(xhRequest.status == 200){
-					options.success(xhRequest.responseText,xhRequest);
-				}
-				else if(xhRequest.status == 404){
-					options.error(xhRequest.responseText,xhRequest);
-				}
-			}
-		};
-
-		xhRequest.open('GET', url, true);
-		xhRequest.send(options.data);
-	}
-</script>
+<!-- <script type="text/javascript" src="./updateFunction.js"></script> -->
 
 </html>

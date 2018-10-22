@@ -13,6 +13,32 @@ body {
     position: relative;
 }
 
+.fixed-div {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 50px;
+    background-color: gray;
+    color: #e3e3e3;
+    font-size: 48;
+    z-index: 1;
+}
+
+.fixed-div,
+.fixed-div-occupy {
+    height: 64px;
+}
+
+.container{
+    position: relative;
+    padding:10px;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
 .title{
     display:flex;
     background-color: #e3e3e3;
@@ -21,6 +47,7 @@ body {
 
 .content{
     display:flex;
+    margin:5px 0 20px 0;
     width:100%;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -28,14 +55,26 @@ body {
 
 .content-start{
     display:flex;
+    margin:5px 0 20px 0;
     width:100%;
     flex-flow: row wrap;
     justify-content: flex-start;
 }
 
+.content-red{
+    margin:5px 0 20px 0;
+    background-color: red;
+}
+
+.content-yellow{
+    margin:5px 0 20px 0;
+    background-color: yellow;
+}
+
 .content-end{
     display:flex;
     width:100%;
+    margin:5px 0 20px 0;
     flex-flow: row wrap-reverse;
     justify-content: flex-end;
 }
