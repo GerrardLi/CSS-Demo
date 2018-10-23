@@ -1,0 +1,71 @@
+html {
+    height: 100%;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+.fixed-div {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 50px;
+    background-color: gray;
+    color: #e3e3e3;
+    font-size: 48;
+    z-index: 1;
+}
+
+.fixed-div,
+.fixed-div-occupy {
+    height: 64px;
+}
+
+.Grid {
+    display: flex;
+}
+
+.Grid-cell {
+    flex: 1;
+    background-color: #e3e3e3;
+    text-align: center;
+    height:30px;
+    margin:3px 0;
+}
+
+.Grid-cell.full-row {
+    flex: 0 0 100%;
+}
+
+.Grid-cell.one-third {
+    flex: 0 0 33.3333%;
+}
+
+.Grid-cell.one-fourth {
+    flex: 0 0 25%;
+}
+
+.Grid-cell.one-sixth {
+    flex: 0 0 16.6666%;
+}
+
+.Grid-cell.auto {
+    flex: 0 0 auto;
+}
+
+.Grid div:nth-child(odd) {
+    background-color: #ADADAD;
+}
+
+.Grid div:nth-child(even) {
+    background-color: #F0F0F0;
+}

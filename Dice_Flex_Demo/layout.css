@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+.HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header,
+footer {
+    background-color: gray;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+header {
+    position:absolute;
+    left:0;
+    right:0;
+    top: 0;
+    opacity:0.8;
+}
+
+footer {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+    opacity:0.8;
+}
+
+.HolyGrail-body {
+    display: flex;
+    flex: 1;
+}
+
+.HolyGrail-content {
+    flex: 1;
+    height: 100%;
+}
+
+.HolyGrail-nav,
+.HolyGrail-ads {
+    flex: 0 0 12em;
+    background-color: orange;
+    text-align: center;
+}
+
+.HolyGrail-nav {
+    order: -1;
+    background-color: blue;
+    text-align: center;
+}
+
+.grail-content {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+  }
+
+.grail-text{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin:0;
+    padding:0;
+    width:25%;
+  }
+
+.dice {
+    display: flex;
+    margin: 10px;
+    background-color: #e3e3e3;
+    width: 180px;
+    height: 180px;
+}
+
+.dot {
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    background-color: black;
+}
+
+.dice-4 {
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.dice-row-4 {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dice-row-center {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Grid {
+    display: flex;
+}
+
+.Grid-cell {
+    flex: 1;
+    background-color: #e3e3e3;
+    border: solid 1px red;
+    text-align: center;
+}
+
+.Grid-cell.u-full {
+    flex: 0 0 100%;
+}
+
+.Grid-cell.u-1of3 {
+    flex: 0 0 33.3333%;
+}
+
+.Grid-cell.u-1of4 {
+    flex: 0 0 25%;
+}
+
+.Grid-cell.u-1of6 {
+    flex: 0 0 16.6666%;
+}
+
+.Grid-cell.auto {
+    flex: 0 0 auto;
+}
