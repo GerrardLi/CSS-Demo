@@ -13,76 +13,21 @@ body {
     position: relative;
 }
 
-.HolyGrail {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-header,
-footer {
-    background-color: gray;
-    text-align: center;
-    height: 30px;
-    line-height: 30px;
-}
-
-header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    opacity: 0.8;
-}
-
-footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-}
-
-.HolyGrail-body {
-    display: flex;
-    flex: 1;
-}
-
-.HolyGrail-content {
-    flex: 1;
-    height: 100%;
-}
-
-.HolyGrail-nav,
-.HolyGrail-ads {
-    flex: 0 0 12em;
-    background-color: orange;
-    text-align: center;
-}
-
-.HolyGrail-nav {
-    order: -1;
-    background-color: blue;
-    text-align: center;
-}
-
-.grail-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.fixed-div {
+    position: fixed;
     width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 50px;
+    background-color: gray;
+    color: #e3e3e3;
+    font-size: 48;
+    z-index: 1;
 }
 
-.grail-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-}
+    opacity:0.8;}
 
+  }
 .dice {
     display: flex;
     margin: 10px;
@@ -122,33 +67,14 @@ footer {
     justify-content: center;
 }
 
-.Grid {
+.dice-row-right {
+    flex-basis: 100%;
     display: flex;
+    justify-content: flex-end;
 }
 
-.Grid-cell {
-    flex: 1;
-    background-color: #e3e3e3;
-    border: solid 1px red;
-    text-align: center;
-}
-
-.Grid-cell.u-full {
-    flex: 0 0 100%;
-}
-
-.Grid-cell.u-1of3 {
-    flex: 0 0 33.3333%;
-}
-
-.Grid-cell.u-1of4 {
-    flex: 0 0 25%;
-}
-
-.Grid-cell.u-1of6 {
-    flex: 0 0 16.6666%;
-}
-
-.Grid-cell.auto {
-    flex: 0 0 auto;
+.dice-row-center {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
 }
