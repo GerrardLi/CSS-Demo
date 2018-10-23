@@ -25,9 +25,11 @@ body {
     z-index: 1;
 }
 
-    opacity:0.8;}
+.fixed-div,
+.fixed-div-occupy {
+    height: 64px;
+}
 
-  }
 .dice {
     display: flex;
     margin: 10px;
@@ -53,12 +55,6 @@ body {
     flex-basis: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.dice-row-right {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: flex-end;
 }
 
 .dice-row-center {
