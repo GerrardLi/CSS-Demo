@@ -30,11 +30,11 @@ body {
     height: 64px;
 }
 
-.Grid {
+.grid {
     display: flex;
 }
 
-.Grid-cell {
+.grid-cell {
     flex: 1;
     background-color: #e3e3e3;
     text-align: center;
@@ -42,30 +42,30 @@ body {
     margin:3px 0;
 }
 
-.Grid-cell.full-row {
+.grid-cell.full-row {
     flex: 0 0 100%;
 }
 
-.Grid-cell.one-third {
+.grid-cell.one-third {
     flex: 0 0 33.3333%;
 }
 
-.Grid-cell.one-fourth {
+.grid-cell.one-fourth {
     flex: 0 0 25%;
 }
 
-.Grid-cell.one-sixth {
+.grid-cell.one-sixth {
     flex: 0 0 16.6666%;
 }
 
-.Grid-cell.auto {
+.grid-cell.auto {
     flex: 0 0 auto;
 }
 
-.Grid div:nth-child(odd) {
+.grid div:nth-child(odd) {
     background-color: #ADADAD;
 }
 
-.Grid div:nth-child(even) {
+.grid div:nth-child(even) {
     background-color: #F0F0F0;
 }
