@@ -1,28 +1,30 @@
-html, body {
+/* CSS Reset*/
+
+html,
+body {
     padding: 0;
     margin: 0;
 }
 
+/* CSS Reset*/
+
 .holy-grail {
     display: flex;
-    min-height: 100vh;
+    min-height: 20vh;
     flex-direction: column;
-    text-align: center;
 }
 
 header,
 footer {
     flex: 1;
-
     background-color: #666666;
     color: white;
     font-size: 25px;
 }
 
 .holy-grail-body {
-    flex: 3;
+    flex: 10;
     display: flex;
-    
     background-color: #D6D6D6;
 }
 
@@ -44,15 +46,26 @@ footer {
     background-color: #FA643C;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width:700px) {
     .holy-grail-body {
         flex-direction: column;
-        flex: 1;
+        flex: 3;
     }
-
     .holy-grail-nav,
     .holy-grail-ads,
     .holy-grail-content {
-      flex: auto;
+        flex: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .holy-grail-body {
+        flex-direction: column;
+        flex: 3;
+    }
+    .holy-grail-nav,
+    .holy-grail-ads,
+    .holy-grail-content {
+        flex: auto;
     }
 }
