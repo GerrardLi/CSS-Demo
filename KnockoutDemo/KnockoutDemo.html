@@ -1,0 +1,66 @@
+<!DOCTYPE html language="en">
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Knockout Demo</title>
+	<link rel="stylesheet" href="./DataBinding.css" type="text/css" />
+	<script type="text/javascript" src="./knockout-3.4.2.js"></script>
+</head>
+
+<body>
+	<div class="fixed-div">Knockout Flex Demo</div>
+	<div class="fixed-div-occupy"></div>
+	<div class="line-title">One direction binding</div>
+	<div class="line">
+		First name: <div data-bind="text:president.firstName"></div>&nbsp;Last name: <div data-bind="text:president.lastName"></div>
+	</div>
+	<div class="line-title">Bi-direction binding</div>
+	<div class="line">
+		<div data-bind="text:name"></div>
+		<input type="text" data-bind="value:name" />
+	</div>
+	<div class="line-title">Array binding</div>
+	<div class="table-container">
+		<table class="table">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Name</td>
+					<td>Age</td>
+					<td>Grade</td>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach:UserInfos">
+				<tr>
+					<td data-bind="text:id"></td>
+					<td data-bind="text:(name=='San ZHANG'?'Mr. ZHANG':name)"></td>
+					<td data-bind="text:age"></td>
+					<td data-bind="text:aclass"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="table-container">
+		<table class="table">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Sales</td>
+					<td>Price</td>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach:initialData">
+				<tr>
+					<td data-bind="text:name"></td>
+
+					<td data-bind="text:(sales<80?'not fulfilled':sales)"></td>
+					<td data-bind="text:price"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+<script type="text/javascript" src="./DataBinding.js"></script>
+
+</html>
