@@ -1,0 +1,74 @@
+@maxWidth: 1500px;
+@middleWidth: 1200px;
+@minWidth: 800px;
+/* CSS Reset*/
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* CSS Reset*/
+
+.holy-grail {
+    display: flex;
+    min-height: 20vh;
+    flex-direction: column;
+}
+
+header,
+footer {
+    flex: 1;
+    background-color: #666666;
+    color: white;
+    font-size: 25px;
+}
+
+.holy-grail-body {
+    flex: 10;
+    display: flex;
+    background-color: #D6D6D6;
+}
+
+.holy-grail-content {
+    flex: 1;
+}
+
+.holy-grail-nav,
+.holy-grail-ads {
+    flex: 0 0 12em;
+}
+
+.holy-grail-nav {
+    background-color: #7CBBDC;
+    order: -1;
+}
+
+.holy-grail-ads {
+    background-color: #FA643C;
+}
+
+@media (max-width: @maxWidth) and (min-width:@middleWidth) {
+    .holy-grail-body {
+        flex-direction: column;
+        flex: 3;
+    }
+    .holy-grail-nav,
+    .holy-grail-ads,
+    .holy-grail-content {
+        flex: auto;
+    }
+}
+
+@media (max-width: @minWidth) {
+    .holy-grail-body {
+        flex-direction: column;
+        flex: 3;
+    }
+    .holy-grail-nav,
+    .holy-grail-ads,
+    .holy-grail-content {
+        flex: auto;
+    }
+}
