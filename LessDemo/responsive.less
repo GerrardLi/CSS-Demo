@@ -1,0 +1,24 @@
+@maxWidth: 1500px;
+@middleWidth: 1000px;
+@minWidth: 600px;
+@media (max-width: @maxWidth) and (min-width:@middleWidth) {
+    .holy-grail-body {
+        .holy-body-column;
+    }
+    .holy-grail-nav,
+    .holy-grail-ads,
+    .holy-grail-content {
+        .common-column;
+    }
+}
+
+@media (max-width: @minWidth) {
+    .holy-grail-body {
+        .holy-body-column;
+    }
+    .holy-grail-nav,
+    .holy-grail-ads,
+    .holy-grail-content {
+        .common-column;
+    }
+}
